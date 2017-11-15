@@ -27,4 +27,8 @@
 ### 參考資料
 
 - [公共運輸整合資訊流通服務平台網址](http://ptx.transportdata.tw/PTX)
-- [串接範例程式碼](http://ptx.transportdata.tw/PTX/Data/Code)
+- [串接範例程式碼](https://github.com/ptxmotc/Sample-code)
+
+
+### 異動紀錄
+- 主控台應用程式設定 HttpClient 類別支援 GZip, Deflate 壓縮格式，減少資料傳遞時的資料量
