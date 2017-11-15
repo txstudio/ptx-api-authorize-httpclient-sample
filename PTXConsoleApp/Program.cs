@@ -1,5 +1,6 @@
 ﻿using PTXHttpClientExtension;
 using System;
+using System.Net;
 using System.Net.Http;
 
 namespace PTXConsoleApp
@@ -15,11 +16,19 @@ namespace PTXConsoleApp
 
         static void Main(string[] args)
         {
-            HttpClient _client;
             string _html;
+            
+            HttpClient _client;
+            HttpClientHandler _clientHandler;
 
-            _client = new HttpClient();
+            _clientHandler = new HttpClientHandler();
+
+            //啟用 GZip, Deflate 壓縮傳輸 / 減少傳遞的資料量
+            _clientHandler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+
+            _client = new HttpClient(_clientHandler);
             _client.BaseAddress = new Uri(baseAddress);
+
 
             Console.WriteLine("start api request");
 
