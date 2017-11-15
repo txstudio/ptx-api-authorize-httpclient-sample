@@ -11,7 +11,7 @@ namespace PTXConsoleApp
         const string appKey = "your appKey";
 
         const string baseAddress = "http://ptx.transportdata.tw/";
-        const string requestUri = "/MOTC/APIs/v2/Air/FIDS/Airport/TNN?$format=json";
+        const string requestUri = "/MOTC/v2/Air/FIDS/Airport/TNN?$format=json";
 
         static void Main(string[] args)
         {
