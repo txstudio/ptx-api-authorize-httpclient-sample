@@ -16,7 +16,7 @@ namespace PTXConsoleApp
 
         static void Main(string[] args)
         {
-            string _html;
+            string _json;
             
             HttpClient _client;
             HttpClientHandler _clientHandler;
@@ -41,12 +41,12 @@ namespace PTXConsoleApp
 
                 if (_response.IsSuccessStatusCode == true)
                 {
-                    _html = _response.Content.ReadAsStringAsync().Result;
+                    _json = _response.Content.ReadAsStringAsync().Result;
 
                     Console.WriteLine("{0}\t{1}\t{2}"
                                     , i
                                     , _response.StatusCode
-                                    , _html.Substring(0, 50));
+                                    , _json.Substring(0, 50));
                 }
             }
 
