@@ -16,6 +16,7 @@ namespace PTXConsoleApp
         static void Main(string[] args)
         {
             HttpClient _client;
+            string _html;
 
             _client = new HttpClient();
             _client.BaseAddress = new Uri(baseAddress);
@@ -31,7 +32,12 @@ namespace PTXConsoleApp
 
                 if (_response.IsSuccessStatusCode == true)
                 {
-                    Console.WriteLine("{0}\t{1}", i++, _response.StatusCode);
+                    _html = _response.Content.ReadAsStringAsync().Result;
+
+                    Console.WriteLine("{0}\t{1}\t{2}"
+                                    , i
+                                    , _response.StatusCode
+                                    , _html.Substring(0, 50));
                 }
             }
 
