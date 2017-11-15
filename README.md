@@ -7,7 +7,7 @@
 ### 方案架構
 |專案名稱|類型|備註|
 |--|--|--|
-|PTXConsoleApp|主控台應用程式|--|
+|PTXConsoleApp|主控台應用程式|有 HttpClient 啟用 GZip 與 Deflate 功能的程式碼片段|
 |PTXHttpClientExtension|.NET Standard 2.0 類別庫|--|
 
 > 主控台應用程式專案 .NET Framework 版本為 .NET Framework 4.6.1
