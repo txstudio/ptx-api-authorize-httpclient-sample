@@ -11,7 +11,7 @@ namespace PTXConsoleApp
         const string appID = "your appID";
         const string appKey = "your appKey";
 
-        const string baseAddress = "http://ptx.transportdata.tw/";
+        const string baseAddress = "https://ptx.transportdata.tw/";
         const string requestUri = "/MOTC/v2/Air/FIDS/Airport/TNN?$format=json";
 
         static void Main(string[] args)
@@ -47,6 +47,11 @@ namespace PTXConsoleApp
                                     , i
                                     , _response.StatusCode
                                     , _json.Substring(0, 50));
+                }
+                else
+                {
+                    Console.WriteLine("Status Cdoe: {0}", (int)_response.StatusCode);
+                    Console.WriteLine("Message: {0}", _response.ReasonPhrase);
                 }
             }
 
