@@ -1,4 +1,8 @@
-# 公共運輸整合資訊流通服務平台串接範例程式碼
+因平台已更新，請至最新的平台範例程式碼取得最新的範例
+
+https://github.com/tdxmotc/SampleCode
+
+# 公共運輸整合資訊流通服務平台串接範例程式碼 (已逾時)
 
 因網站提供的 CSharp API 串接範例程式碼使用 WebClient 類別，故撰寫一份使用 CSharp 與 .NET Standard 擴充 HttpClient 方法進行 PTX API 串接簽章驗證的類別庫範例程式碼。
 
